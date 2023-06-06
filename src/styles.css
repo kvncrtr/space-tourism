@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+   --clr-primary-100: #FFFFFF;
+   --clr-primary-400: #D0D6F9;
+   --clr-primary-900: #0B0D17;
+
+   --clr-neutral-900: #000000;
+
+   --ff-primary-400: 'Barlow Condensed', 'Futura','Trebuchet MS', Arial, sans-serif, 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+   --ff-primary-500: 'Bellefair', 'Futura','Trebuchet MS', Arial, sans-serif, 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+
+   --ff-body: var(--ff-primary-400);
+   --ff-heading: var(--ff-primary-500);
+
+   --fw-regular: 400;
+   --fw-bold: 700;
+
+   --fw-primary: var(--fw-regular);
+   --fw-number: var(--fw-bold);
+
+   --fs-200: 0.875rem;
+   --fs-300: 0.9375rem;
+   --fs-400: 1rem;
+   --fs-500: 1.125rem;
+   --fs-600: 1.25rem;
+   --fs-700: 1.5rem;
+   --fs-800: 1.75rem;
+   --fs-900: 2rem;
+   --fs-1000: 2.5rem;
+   --fs-1100: 3.5rem;
+   --fs-1200: 5rem;
+   --fs-1300: 6.25rem;
+   --fs-1400: 9.375rem;
+
+   --fs-title: var(--fs-400);
+   --fs-nav: var(--fs-400); 
+   --fs-body: var(--fs-300);
+   --fs-button: var(--fs-400);
+   --fs-home-heading: var(--fs-1200);
+   --fs-home-explore: var(--fs-600);
+   --fs-dest-nav: var(--fs-200);
+   --fs-dest-heading: var(--fs-1100);
+   --fs-dest-specs: var(--fs-200);
+   --fs-dest-value: var(--fs-800);
+   --fs-crew-position: var(--fs-400);
+   --fs-crew-name: var(--fs-700);
+   --fs-tech-subtitle: var(--fs-200); 
+   --fs-tech: var(--fs-crew-name); 
+   
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+   margin: 0;
+   padding: 0;
+   font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
