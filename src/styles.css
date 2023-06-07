@@ -31,7 +31,7 @@
    --fs-1300: 6.25rem;
    --fs-1400: 9.375rem;
 
-   --fs-title: var(--fs-400);
+   /* --fs-title: var(--fs-400);
    --fs-nav: var(--fs-400); 
    --fs-body: var(--fs-300);
    --fs-button: var(--fs-400);
@@ -44,9 +44,18 @@
    --fs-crew-position: var(--fs-400);
    --fs-crew-name: var(--fs-700);
    --fs-tech-subtitle: var(--fs-200); 
-   --fs-tech: var(--fs-crew-name); 
-   
+   --fs-tech: var(--fs-crew-name);  */
+}
 
+
+
+@media screen and (min-width: 768px) {
+  .home--headeing {
+    font-size: var(--fs-1400);
+    font-weight: var(--fw-primary);
+  }
+
+  
 }
 
 /* Box sizing rules */
