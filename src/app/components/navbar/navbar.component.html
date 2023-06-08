@@ -1,10 +1,25 @@
-<img src="" alt="logo">
-<div class="navbar--menu">
-   <ul>
-      <li routerLink="/" >
-         <a class="navbar--number"></a>
-         <a class="navbar--name"></a>
-      </li>
-   </ul>
+<div class="navbar--img-container">
+   <svg class="navbar--img" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
 </div>
 
+<!-- (click)="toggleNav()" -->
+<button class="navbar--hamberger" title="nav button" nav-expanded="not-expanded" type="button" ></button>
+
+<div class="navbar--line"></div>
+
+<nav>
+   <ul class="navbar--list" data-visible="not-visible">
+      <li class="navbar--link" routerLinkActive="active" routerLink="/home">
+         <a><span aria-hidden="true">00</span>Home</a>
+      </li>
+      <li class="navbar--link" routerLinkActive="active" routerLink="/destination">
+         <a><span aria-hidden="true">01</span>Destination</a>
+      </li>
+      <li class="navbar--link" routerLinkActive="active" routerLink="/crew">
+         <a><span aria-hidden="true">02</span>Crew</a>
+      </li>
+      <li class="navbar--link" routerLinkActive="active" routerLink="/tech">
+         <a><span aria-hidden="true">03</span>Technology</a>
+      </li>
+   </ul>
+</nav>

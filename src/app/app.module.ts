@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { DestinationsComponent } from './components/destinations/destinations.component';
-import { DestinationsBarComponent } from './components/destinations/destinations-bar/destinations-bar.component';
+import { DestinationComponent } from './components/destination/destination.component';
+import { DestinationBarComponent } from './components/destination/destination-bar/destination-bar.component';
 import { CrewComponent } from './components/crew/crew.component';
 import { CrewCarouselComponent } from './components/crew/crew-carousel/crew-carousel.component';
 import { TechComponent } from './components/tech/tech.component';
@@ -16,8 +16,8 @@ import { TechComponent } from './components/tech/tech.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    DestinationsComponent,
-    DestinationsBarComponent,
+    DestinationComponent,
+    DestinationBarComponent,
     CrewComponent,
     CrewCarouselComponent,
     TechComponent
