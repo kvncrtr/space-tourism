@@ -1,0 +1,7 @@
+@media screen and (min-width: 375px) {
+   .navbar--container {
+      position: fixed;
+      display: flex;
+      background-color: indigo;      
+   }
+} 
