@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: '.destination--bar-container',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./destination-bar.component.css']
 })
 export class DestinationBarComponent implements OnInit {
+  @Input() childDestination: any;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }

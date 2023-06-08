@@ -1,6 +1,3 @@
-<ul>
-   <li>Moon</li>
-   <li>Mars</li>
-   <li>Europa</li>
-   <li>Titans</li>
+<ul *ngFor="let place of childDestination">
+   <li>{{ place.name }}</li>
 </ul>

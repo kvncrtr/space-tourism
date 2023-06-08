@@ -1,13 +1,20 @@
 <h5 class="destination--title">Pick your destination</h5>
-<img src="" alt="">
-<div class="destination--bar-container"></div>
+<img src="{{ destination[0].images.png }}" alt="{{ destination[0].name }}">
+<div class="destination--bar-container" [childDestination]="destination"></div>
 
 <div class="destination--details-container">
-   <h2 class="destination--heading"></h2>
-   <p class="destination--description"></p>
+   <h2 class="destination--heading">{{ destination[0].name }}</h2>
+   <p class="destination--description">{{ destination[0].description }}</p>
 
    <div class="destination--spec-container">
-      <h4 class="destination--spec-heading"></h4>
-      <p class="destination--spec-value"></p>
+      <div class="destination--distance">
+         <h4 class="destination--spec-heading">AVG. DISTANCE</h4>
+         <p class="destination--spec-value">{{ destination[0].distance }}</p>
+      </div>
+
+      <div class="destination--travel">
+         <h4 class="destination--spec-heading">EST. TRAVEL TIME</h4>
+         <p class="destination--spec-value">{{ destination[0].travel }}</p>
+      </div>
    </div>
 </div>
