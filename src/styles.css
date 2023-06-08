@@ -47,6 +47,10 @@
    --fs-tech: var(--fs-crew-name);  */
 }
 
+@media screen and (min-width: 375px) {
+
+}
+
 @media screen and (min-width: 768px) {
   .home--headeing {
     font-size: var(--fs-1400);
@@ -85,6 +89,7 @@ html:focus-within {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-attachment: fixed;
 }
 
 html,

@@ -2,6 +2,7 @@
    .navbar--container {
       position: fixed;
       display: flex;
-      background-color: indigo;      
+      min-width: 100%;
+
    }
 } 

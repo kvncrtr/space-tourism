@@ -1,0 +1,45 @@
+@media screen and (min-width: 375px) {
+   .navbar--case:before {
+      content: '';
+      position: absolute;
+      top: 0; 
+      bottom: 0;
+      left: 0;
+      right: 0.03rem;
+      z-index: -1;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.7742px);
+      background: inherit;
+   }
+
+   .navbar--case {
+      position: absolute;
+      right: 0;
+      width: 67vw;
+      height: 100vh;
+      color: var(--clr-primary-100);
+      background: inherit;
+      overflow: hidden; 
+   }
+
+   .inactive {
+      position: absolute;
+      right: -67vw;
+      width: 67vw;
+      height: 100vh;
+   }
+
+   .navbar--list {
+      background-color: transparent;
+   }
+
+   .navbar--link {
+      font-family: var(--ff-body);
+      list-style: none;
+   }
+
+   .navbar--link span {
+      margin-right: 0.6875rem;
+      font-weight: var(--fw-bold);
+   }
+}
