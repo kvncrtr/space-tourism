@@ -8,7 +8,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DestinationComponent } from './components/destination/destination.component';
 import { DestinationBarComponent } from './components/destination/destination-bar/destination-bar.component';
 import { CrewComponent } from './components/crew/crew.component';
-import { CrewCarouselComponent } from './components/crew/crew-carousel/crew-carousel.component';
 import { TechComponent } from './components/tech/tech.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { TechComponent } from './components/tech/tech.component';
     DestinationComponent,
     DestinationBarComponent,
     CrewComponent,
-    CrewCarouselComponent,
     TechComponent
   ],
   imports: [

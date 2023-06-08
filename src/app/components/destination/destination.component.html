@@ -1,10 +1,15 @@
-<h5 class="destination--title">Pick your destination</h5>
+<h5 class="destination--title"><span aria-hidden="true">01</span>Pick your destination</h5>
 <img src="{{ destination[0].images.png }}" alt="{{ destination[0].name }}">
-<div class="destination--bar-container" [childDestination]="destination"></div>
+<ul *ngFor="let place of destination">
+   <li>{{ place.name }}</li>
+</ul>
+<!-- <div class="destination--bar-container" [childDestination]="destination"></div> -->
 
 <div class="destination--details-container">
    <h2 class="destination--heading">{{ destination[0].name }}</h2>
    <p class="destination--description">{{ destination[0].description }}</p>
+
+   <div class="destination--line line"></div>
 
    <div class="destination--spec-container">
       <div class="destination--distance">

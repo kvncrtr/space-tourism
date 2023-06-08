@@ -11,10 +11,13 @@ import { SpaceService } from '../../space.service';
 export class CrewComponent implements OnInit {
   crew: Crew[] = []
 
+  /* set properties to have current selected memeber set to the object that is wanted */ 
+  /* then pass that object to the template value through this.crew */ 
+
   constructor(private spaceService: SpaceService) { }
 
   ngOnInit(): void {
-    this.getCrewData
+    this.getCrewData()
   }
   
   getCrewData(): void {
