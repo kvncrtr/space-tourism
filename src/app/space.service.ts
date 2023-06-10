@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
-import { Space, Destinations, Crew, Technology } from './space';
+import { Space } from './space';
 import { SPACE } from './space-data';
 
 @Injectable({
@@ -10,19 +11,8 @@ export class SpaceService {
 
   constructor() { }
 
-  getSpaceData(): Space {
-    return SPACE
-  };
-
-  getDestinationData(): Destinations[] {
-    return SPACE.destinations
-  };
-
-  getCrewData(): Crew[] {
-    return SPACE.crew
-  };
-
-  getTechnologyData(): Technology[] {
-    return SPACE.technology
-  };
+  getSpaceData(): Observable<Space> {
+    const space = of(SPACE);
+    return space
+  }; 
 };

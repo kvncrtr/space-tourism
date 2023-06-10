@@ -9,7 +9,7 @@ import { SpaceService } from '../../space.service';
   styleUrls: ['./destination.component.css']
 })
 export class DestinationComponent implements OnInit { 
-  destination: Destinations[] = [];
+  destination: any;
 
   constructor(private spaceService: SpaceService) { }
 
@@ -18,6 +18,9 @@ export class DestinationComponent implements OnInit {
   }
 
   getDestinationData(): void {
-    this.destination = this.spaceService.getDestinationData()
+    // this.destination = this.spaceService.getDestinationData()
+
+    this.spaceService.getSpaceData()
+      .subscribe(spaceData => this.destination = spaceData.destinations)
   }
 }

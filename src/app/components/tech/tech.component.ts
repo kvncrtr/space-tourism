@@ -18,6 +18,7 @@ export class TechComponent implements OnInit {
   }
   
   getTechData(): void {
-    this.technology = this.spaceService.getTechnologyData()
+    this.spaceService.getSpaceData()
+      .subscribe(spaceData => this.technology = spaceData.technology)
   }
 }

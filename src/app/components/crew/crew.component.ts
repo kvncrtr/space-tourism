@@ -21,6 +21,7 @@ export class CrewComponent implements OnInit {
   }
   
   getCrewData(): void {
-    this.crew = this.spaceService.getCrewData()
+    this.spaceService.getSpaceData()
+      .subscribe(spaceData => this.crew = spaceData.crew)
   }
 }
