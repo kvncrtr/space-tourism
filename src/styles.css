@@ -55,9 +55,7 @@
   .home--headeing {
     font-size: var(--fs-1400);
     font-weight: var(--fw-primary);
-  }
-
-  
+  }  
 }
 
 /* Box sizing rules */
@@ -94,7 +92,8 @@ body {
 
 html,
 body {
-   height: 100%;
+  height: 100%;
+  font-family: var(--ff-body);
 }
 
 /* A elements that don't have a class get default styles */
