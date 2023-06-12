@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DestinationComponent } from './components/destination/destination.component';
-import { DestinationBarComponent } from './components/destination/destination-bar/destination-bar.component';
 import { CrewComponent } from './components/crew/crew.component';
 import { TechComponent } from './components/tech/tech.component';
 
@@ -16,7 +15,6 @@ import { TechComponent } from './components/tech/tech.component';
     HomeComponent,
     NavbarComponent,
     DestinationComponent,
-    DestinationBarComponent,
     CrewComponent,
     TechComponent
   ],

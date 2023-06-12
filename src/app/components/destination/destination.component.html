@@ -1,25 +1,31 @@
-<h5 class="destination--title"><span aria-hidden="true">01</span>Pick your destination</h5>
-<img src="{{ destination[0].images.png }}" alt="{{ destination[0].name }}">
-<ul *ngFor="let place of destination">
-   <li>{{ place.name }}</li>
-</ul>
-<!-- <div class="destination--bar-container" [childDestination]="destination"></div> -->
+<img class="destination--background" src="../../../assets/destination/background-destination-mobile.jpg" alt="destination background">
 
-<div class="destination--details-container">
-   <h2 class="destination--heading">{{ destination[0].name }}</h2>
-   <p class="destination--description">{{ destination[0].description }}</p>
+<div class="destination--case">
+   <div class="destination--content-case">
+      <h5 class="destination--title"><span aria-hidden="true">01</span>Pick your destination</h5>
+   
+      <img class="destination--image" src="{{ destination[0].images.png }}" alt="{{ destination[0].name }}">
+      
+      <ul class="destination--bar">
+         <li class="destination--item selected" *ngFor="let place of destination">{{ place.name }}</li>
+      </ul>
 
-   <div class="destination--line line"></div>
+   </div>
 
-   <div class="destination--spec-container">
-      <div class="destination--distance">
-         <h4 class="destination--spec-heading">AVG. DISTANCE</h4>
-         <p class="destination--spec-value">{{ destination[0].distance }}</p>
-      </div>
-
-      <div class="destination--travel">
-         <h4 class="destination--spec-heading">EST. TRAVEL TIME</h4>
-         <p class="destination--spec-value">{{ destination[0].travel }}</p>
+   <div class="destination--details-container">
+      <h2 class="destination--heading">{{ destination[0].name }}</h2>
+      <p class="destination--description">{{ destination[0].description }}</p>
+      
+      <div class="destination--spec-container">
+         <div class="destination--distance">
+            <h4 class="destination--spec-heading">AVG. DISTANCE</h4>
+            <p class="destination--spec-value">{{ destination[0].distance }}</p>
+         </div>
+         
+         <div class="destination--travel">
+            <h4 class="destination--spec-heading">EST. TRAVEL TIME</h4>
+            <p class="destination--spec-value">{{ destination[0].travel }}</p>
+         </div>
       </div>
    </div>
 </div>
