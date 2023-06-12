@@ -14,12 +14,35 @@
 
    .navbar--case {
       position: absolute;
+      top: 0;
       right: 0;
       width: 67vw;
       height: 100vh;
+      padding: 1.5rem;
       color: var(--clr-primary-100);
       background: inherit;
       overflow: hidden; 
+   }
+
+   .navbar--hamberger {
+      max-height: 1.313rem;
+   }
+
+   .navbar--close-case {
+      display: flex;
+      justify-content: end;
+   }
+
+   .navbar--box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: -2;
+      min-width: 100%;
+   }
+
+   .navbar--line {
+      display: none;
    }
 
    .inactive {
@@ -30,16 +53,21 @@
    }
 
    .navbar--list {
-      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 4.063rem;
+      font-size: var(--fs-400);
    }
 
    .navbar--link {
       font-family: var(--ff-body);
+      text-transform: uppercase;
       list-style: none;
    }
 
    .navbar--link span {
-      margin-right: 0.6875rem;
+      margin: 0 0.6875rem 0 0.375rem;
       font-weight: var(--fw-bold);
    }
 }
