@@ -37,6 +37,9 @@
    }
 
    .home--pitch {
+      min-width: 20.438rem;
+      max-width: 31.25rem;
+      margin: 0 auto;
       font-size: var(--fs-300);
       letter-spacing: 1.45px;
       line-height:  25px;

@@ -27,19 +27,19 @@
       >
 
    </div>
-   
+
    <ul class="navbar--list">
       <li class="navbar--link" routerLinkActive="active" routerLink="/home">
-         <a><span aria-hidden="true">00</span>Home</a>
+         <div (click)="toggleNav()"><span aria-hidden="true">00</span>Home</div>
       </li>
       <li class="navbar--link" routerLinkActive="active" routerLink="/destination">
-         <a><span aria-hidden="true">01</span>Destination</a>
+         <div (click)="toggleNav()"><span aria-hidden="true">01</span>Destination</div>
       </li>
       <li class="navbar--link" routerLinkActive="active" routerLink="/crew">
-         <a><span aria-hidden="true">02</span>Crew</a>
+         <div (click)="toggleNav()"><span aria-hidden="true">02</span>Crew</div>
       </li>
       <li class="navbar--link" routerLinkActive="active" routerLink="/tech">
-         <a><span aria-hidden="true">03</span>Technology</a>
+         <div (click)="toggleNav()"><span aria-hidden="true">03</span>Technology</div>
       </li>
    </ul>
 </div>
