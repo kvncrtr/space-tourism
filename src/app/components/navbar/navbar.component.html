@@ -19,10 +19,15 @@
 
 <div class="navbar--case inactive">
    <div class="navbar--close-case">
-      <img class="navbar--close" src="../../../assets/shared/icon-close.svg" alt="close navbar">
-   </div>
+      <img 
+         class="navbar--close" 
+         src="../../../assets/shared/icon-close.svg" 
+         alt="close navbar"  
+         (click)="toggleNav()"
+      >
 
-<!-- inactive -->
+   </div>
+   
    <ul class="navbar--list">
       <li class="navbar--link" routerLinkActive="active" routerLink="/home">
          <a><span aria-hidden="true">00</span>Home</a>

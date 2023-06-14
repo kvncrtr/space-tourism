@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: '.navbar--container',
@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
 
   }
   
   toggleNav(): void {
-    
+    this.elementRef.nativeElement.children[1].classList.toggle('inactive')
   }
 }
