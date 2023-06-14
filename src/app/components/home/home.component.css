@@ -1,15 +1,11 @@
 @media screen and (min-width: 375px) {
-   .home--background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      min-width: 100%;
+   .home--case {
       height: 100vh;
-      object-fit: cover;
-      object-position: 0px 0%;
+      background: url(../../../assets/home/background-home-mobile.jpg) no-repeat;
+      background-size: cover;
+      background-position: 100% 100%;
    }
-   
+
    .home--content {
       position: absolute;
       top: 7rem;
