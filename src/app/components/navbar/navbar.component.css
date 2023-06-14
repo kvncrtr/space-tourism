@@ -6,6 +6,10 @@
       z-index: 1;
       min-width: 100%;
    }
+
+   .navbar--img-container {
+      cursor: pointer;
+   }
    
    .navbar--hamberger {
       max-height: 1.313rem;
