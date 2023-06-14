@@ -78,6 +78,7 @@
       font-family: var(--ff-body);
       text-transform: uppercase;
       list-style: none;
+      cursor: pointer;
    }
 
    .navbar--link span {
