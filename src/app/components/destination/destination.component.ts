@@ -18,6 +18,6 @@ export class DestinationComponent implements OnInit  {
 
   getDestinationData(): void {
     this.spaceService.getSpaceData()
-      .subscribe(spaceData => this.destination = spaceData.destinations)
+      .subscribe(space => this.destination = space.destinations)
   }
 }

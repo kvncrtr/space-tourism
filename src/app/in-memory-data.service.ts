@@ -6,7 +6,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const spcaeData = {
+    const space = {
       "destinations": [
          {
             "name": "Moon",
@@ -114,6 +114,6 @@ export class InMemoryDataService implements InMemoryDbService {
          }
       ]
    };
-    return {spcaeData};
+    return space;
   }
 }

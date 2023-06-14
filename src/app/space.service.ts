@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Space } from './space';
-import { SPACE } from './space-data';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SpaceService {
+  private spaceUrl = 'api/space';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getSpaceData(): Observable<Space> {
-    const space = of(SPACE);
-    return space
+    return this.http.get<Space>(this.spaceUrl)
   }; 
 };
