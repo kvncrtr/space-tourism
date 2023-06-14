@@ -32,6 +32,7 @@
    }
 
    span {
+      font-weight: var(--fw-bold);
       margin-right: 1.125rem;
       mix-blend-mode: normal;
       opacity: 0.25;

@@ -1,15 +1,24 @@
-<h4 class="tech--button">Space Launch 101</h4>
-<div class="tech--carousel--container">
-   <img src="{{ technology[0].images.landscape }}" alt="{{ technology[0].name }}" />
+<img class="tech--background" src="../../../assets/technology/background-technology-mobile.jpg" alt="swirled background">
 
-   <div class="tech--button-case">
-      <button class="tech--button" type="button" title="launch">1</button>
-      <button class="tech--button" type="button" title="spaceport">2</button>
-      <button class="tech--button" type="button" title="space-capsule">3</button>
+<div class="tech--case">
+   <h4 class="tech--title"><span aria-hidden="true">03</span>Space Launch 101</h4>
+
+   <div class="tech--carousel--container">
+      <div class="tech--image-case">
+         <img src="{{ technology[0].images.landscape }}" alt="{{ technology[0].name }}" />
+
+      </div>
+         
+      <div class="tech--button-case">
+         <button class="tech--button selected" type="button" title="launch">1</button>
+         <button class="tech--button" type="button" title="spaceport">2</button>
+         <button class="tech--button" type="button" title="space-capsule">3</button>
+      </div>
+   
    </div>
-
+   
+   <h4 class="tech--terminology">The Terminology...</h4>
+   <h3 class="tech--subheading">{{ technology[0].name }}</h3>
+   <p class="tech--description">{{ technology[0].description }}</p>
+   
 </div>
-
-<h4 class="tech--terminology">The Terminology ...</h4>
-<h3 class="tech--subheading">{{ technology[0].name }}</h3>
-<p class="tech--description">{{ technology[0].description }}</p>

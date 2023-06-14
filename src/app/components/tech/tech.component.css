@@ -1,0 +1,96 @@
+@media screen and (min-width: 375px) {
+   .tech--background {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      object-fit: cover;
+      object-position: 0px 0%;      
+   }
+
+   .tech--case {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      margin-top: 6rem;
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--clr-primary-100);
+   }
+
+   .tech--title {
+      font-size: var(--fs-400);
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 2.7px;
+   }
+
+   span {
+      font-weight: var(--fw-bold);
+      margin-right: 1.125rem;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+   }
+
+   .tech--carousel--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
+   }
+
+   .tech--image-case {
+      margin: 0 -1.5rem;
+   }
+
+   .tech--button-case {
+      display: flex;
+      gap: 1rem;
+      margin: 2.125rem auto 0;
+   }
+
+   .tech--button {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0.083rem solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      font-family: var(--ff-heading);
+      color: inherit;
+      background-color: inherit;
+      cursor: pointer;
+   }
+
+   .tech--button:hover {
+      border: 0.083rem solid rgba(255, 255, 255, 1);
+   }
+
+   .selected {
+      background-color: var(--clr-primary-100);
+      color: var(--clr-primary-900);
+   }
+
+   .tech--terminology {
+      margin-top: 1.625rem;
+      font-size: var(--fs-200);
+      text-transform: uppercase;
+      color: var(--clr-primary-400);
+      letter-spacing: 2.3625px;
+   }
+
+   .tech--subheading {
+      margin-top: 0.35rem;
+      font-family: var(--ff-heading);
+      font-size: var(--fs-700);
+      text-transform: uppercase;
+   }
+
+   .tech--description {
+      max-width: 20.438rem;
+      margin: 1rem auto 0;
+      font-size: var(--fs-300);
+      color: var(--clr-primary-400);
+      letter-spacing: 0.1rem;
+      line-height: 25px;
+   }
+}

@@ -37,6 +37,13 @@
       letter-spacing: 2.7px;
    }
 
+   span {
+      font-weight: var(--fw-bold);
+      margin-right: 1.125rem;
+      mix-blend-mode: normal;
+      opacity: 0.25;
+   }
+
    .crew--carousel-container {
       display: flex;
       flex-direction: column;
@@ -117,9 +124,7 @@
       line-height: 25px;
       letter-spacing: 1px;
    }
-}
 
-@media screen and (min-width: 375px) {
    .crew--background {
       position: absolute;
       height: 100vh;
@@ -197,6 +202,7 @@
       background-color: var(--clr-primary-800);
       appearance: none;
       -webkit-appearance: none;
+      cursor: pointer;
    }
    
    input[type="radio"]:before {
@@ -207,6 +213,11 @@
       transform: scale(0);
       transition: 120ms transform ease-in-out;
       box-shadow: inset 1rem 1rem var(--clr-primary-100);
+   }
+
+   input[type="radio"]:hover {
+      transform: scale(1);
+      background-color: rgba(255, 255, 255, 0.5);
    }
 
    input[type="radio"]:checked:before {
