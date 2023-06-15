@@ -1,5 +1,4 @@
 @media screen and (min-width: 375px) {
-   /* how to set a blur to the background image */
    .crew--background {
       height: 100vh;
       padding-top: 6rem;
@@ -47,18 +46,10 @@
    .crew--carousel-container {
       display: flex;
       flex-direction: column;
+      padding: 0 1.5rem;
+      text-align: center;
    }
 
-   /* 
-   how to make this image grow with the screen resize 
-
-   .crew--image-case > img {
-      width: 11.07rem;
-      max-width: 26.563rem;
-      margin: 2rem auto 0;
-      
-   }
-   */
    .crew--image-case > img {
       width: 50vw;
       max-width: 80vw; 
