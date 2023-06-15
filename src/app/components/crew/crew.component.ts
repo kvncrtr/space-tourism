@@ -35,7 +35,12 @@ export class CrewComponent implements OnInit, AfterViewInit {
       })
   }
 
-  switchMemeber(): void {
-    
+  switchMemeber(name: string): void {
+    this.crew.filter(memeber => {
+      console.log(memeber.name, name)
+      if (memeber.name === name) {
+        this.currentMember = memeber
+      }
+    })
   }
 }

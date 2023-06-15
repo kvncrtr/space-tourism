@@ -9,16 +9,16 @@
          
       <div class="crew--radio-container" #radioList>
          <label for="radio--douglas" title="douglas"></label>
-         <input id="radio--douglas" type="radio" name="radio-btn" checked />
+         <input (click)="switchMemeber('Douglas Hurley')" id="radio--douglas" type="radio" name="radio-btn" checked />
          
          <label for="radio--mark" title="mark"></label>
-         <input id="radio--mark" type="radio" name="radio-btn" />
+         <input (click)="switchMemeber('Mark Shuttleworth')" id="radio--mark" type="radio" name="radio-btn" />
 
          <label for="radio--victor" title="victor"></label>
-         <input id="radio--victor" type="radio" name="radio-btn" />
+         <input (click)="switchMemeber('Victor Glover')" id="radio--victor" type="radio" name="radio-btn" />
          
          <label for="radio--anousheh" title="anousheh"></label>
-         <input id="radio--anousheh" type="radio" name="radio-btn" />
+         <input (click)="switchMemeber('Anousheh Ansari')" id="radio--anousheh" type="radio" name="radio-btn" />
       </div>
    
       <h4 class="crew--job">{{ currentMember.role }}</h4>
