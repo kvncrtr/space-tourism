@@ -9,16 +9,22 @@ import { SpaceService } from '../../space.service';
   styleUrls: ['./tech.component.css']
 })
 export class TechComponent implements OnInit {
-  technology: Technology[] = []
+  technology: Technology[] = [];
+  selectedTech: Technology | any;
 
-  constructor(private spaceService: SpaceService) { }
+  constructor(private spaceService: SpaceService) { };
 
   ngOnInit(): void {
-    this.getTechData()
+    this.getTechData();
   }
   
   getTechData(): void {
     this.spaceService.getSpaceData()
-      .subscribe(spaceData => this.technology = spaceData.technology)
-  }
+      .subscribe(spaceData => {
+        this.technology = spaceData.technology
+
+      }
+    );
+  };
+
 }

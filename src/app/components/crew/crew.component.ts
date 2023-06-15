@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { Crew } from '../../space';
 import { SpaceService } from '../../space.service';
@@ -8,23 +8,16 @@ import { SpaceService } from '../../space.service';
   templateUrl: './crew.component.html',
   styleUrls: ['./crew.component.css']
 })
-export class CrewComponent implements OnInit, AfterViewInit {
+export class CrewComponent implements OnInit {
   @ViewChild('radioList') radioList!: ElementRef;
 
   crew: Crew[] = []
   currentMember: any = {};
 
-  /* set properties to have current selected memeber set to the object that is wanted */ 
-  /* then pass that object to the template value through this.crew */ 
-
   constructor(private spaceService: SpaceService) { }
 
   ngOnInit(): void {
     this.getCrewData()
-  }
-
-  ngAfterViewInit(): void {
-    
   }
   
   getCrewData(): void {
