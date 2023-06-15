@@ -7,3 +7,9 @@
       padding: 1.5rem;
    }
 } 
+
+@media screen and (min-width: 1440px) {
+   .navbar--container {
+      margin: 40px 55px;
+   }
+}
