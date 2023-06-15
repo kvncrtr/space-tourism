@@ -1,23 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 import { SpaceService } from '../../space.service';
-import { InMemoryDataService } from 'src/app/in-memory-data.service';
-import { Destinations } from 'src/app/space';
+import { Destinations } from '../../space';
 
 @Component({
   selector: '.destination--container',
   templateUrl: './destination.component.html',
   styleUrls: ['./destination.component.css'],
 })
-export class DestinationComponent implements OnInit  { 
+export class DestinationComponent implements OnInit, AfterViewInit  {
+  @ViewChild('destinationBar') destinationBar!: ElementRef;
+  
   destinationData: Destinations[]  = [];
+  selectedPlanet: Destinations | any;
+  navList: any = {};
 
-  selectedPlanet: any;
-
-  constructor(private spaceService: SpaceService) { }
+  constructor (
+      private spaceService: SpaceService,
+      private elementRef: ElementRef
+    ) { }
 
   ngOnInit(): void {
     this.getDestinationData()
+  }
+
+  ngAfterViewInit(): void {
+    this.setSelectedElement();
   }
 
   getDestinationData(): void {
@@ -28,12 +36,29 @@ export class DestinationComponent implements OnInit  {
       });
   };
 
-  handleClick(placeName: string): void {
+  handleNewData(placeName: string): void {
    this.destinationData.filter(place => {
       if (place.name === placeName) {
         this.selectedPlanet = place
+        this.setSelectedElement()
       }
     })
   }
+
+  setSelectedElement(): void {
+    this.navList = this.destinationBar.nativeElement.childNodes
+    this.selectedPlanet.name
+    this.navList.forEach((node: any) => {
+      if(node.innerHTML) {
+        if (node.innerHTML === this.selectedPlanet.name) {
+          node.classList.add('selected')
+        }
+        else {
+          node.classList.remove('selected')
+        }
+      }
+    })
+    
+  } 
   
 }

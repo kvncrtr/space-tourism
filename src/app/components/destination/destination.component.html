@@ -6,11 +6,12 @@
       
          <img class="destination--image" src="{{ selectedPlanet.images.png }}" alt="{{ selectedPlanet.name }}">
          
-         <ul class="destination--bar">
+         <ul class="destination--bar" #destinationBar>
             <li 
             class="destination--item" 
             *ngFor="let place of destinationData" 
-            (click)="handleClick(place.name)">{{ place.name }}</li>
+            (click)="handleNewData(place.name)"
+            >{{ place.name }}</li>
          </ul>
 
       </div>
