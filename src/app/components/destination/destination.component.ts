@@ -15,47 +15,44 @@ export class DestinationComponent implements OnInit, AfterViewInit  {
   selectedPlanet: Destinations | any;
   navList: any = {};
 
-  constructor (private spaceService: SpaceService) { }
+  constructor (private spaceService: SpaceService) { };
 
   ngOnInit(): void {
-    this.getDestinationData()
-  }
+    this.getDestinationData();
+  };
 
   ngAfterViewInit(): void {
+    this.navList = this.destinationBar.nativeElement.childNodes;
     this.setSelectedElement();
   }
-
+  
   getDestinationData(): void {
     this.spaceService.getSpaceData()
-      .subscribe(spaceData => {
-        this.destinationData = spaceData.destinations
-        this.selectedPlanet = spaceData.destinations[0]
+    .subscribe(spaceData => {
+      this.destinationData = spaceData.destinations;
+      this.selectedPlanet = spaceData.destinations[0];
       });
   };
 
   handleNewData(placeName: string): void {
    this.destinationData.filter(place => {
       if (place.name === placeName) {
-        this.selectedPlanet = place
-        this.setSelectedElement()
-      }
-    })
-  }
+        this.selectedPlanet = place;
+        this.setSelectedElement();
+      };
+    });
+  };
 
   setSelectedElement(): void {
-    this.navList = this.destinationBar.nativeElement.childNodes
-    this.selectedPlanet.name
-    this.navList.forEach((node: any) => {
-      if(node.innerHTML) {
-        if (node.innerHTML === this.selectedPlanet.name) {
-          node.classList.add('selected')
+    this.navList.forEach((element: any) => {
+      if (element.innerHTML === this.selectedPlanet.name) {
+        element.classList.add('selected');
+      } else {
+        if (element.innerHTML) {
+          element.classList.remove('selected')
         }
-        else {
-          node.classList.remove('selected')
-        }
-      }
-    })
-    
-  } 
+      };
+    });    
+  }; 
   
-}
+};

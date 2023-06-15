@@ -5,21 +5,45 @@
    
       <div class="tech--carousel--container">
          <div class="tech--image-case">
-            <img src="{{ technology[0].images.landscape }}" alt="{{ technology[0].name }}" />
+            <img src="{{ selectedTech.images.landscape }}" alt="{{ selectedTech.name }}" />
    
          </div>
             
-         <div class="tech--button-case">
-            <button class="tech--button selected" type="button" title="launch">1</button>
-            <button class="tech--button" type="button" title="spaceport">2</button>
-            <button class="tech--button" type="button" title="space-capsule">3</button>
+         <div class="tech--button-case" #buttonList>
+            <button 
+               class="tech--button selected" 
+               (click)="switchTech('Launch vehicle')" 
+               type="button"
+               name="Launch vehicle"
+            >
+               1
+            </button>
+
+            <button 
+               class="tech--button" 
+               (click)="switchTech('Spaceport')" 
+               type="button"
+               name="Spaceport"
+            >
+               2
+            </button>
+
+            <button 
+               class="tech--button" 
+               (click)="switchTech('Space capsule')" 
+               type="button"
+               name="Space capsule"
+            >
+               3
+            </button>
+
          </div>
       
       </div>
       
       <h4 class="tech--terminology">The Terminology...</h4>
-      <h3 class="tech--subheading">{{ technology[0].name }}</h3>
-      <p class="tech--description">{{ technology[0].description }}</p>
+      <h3 class="tech--subheading">{{ selectedTech.name }}</h3>
+      <p class="tech--description">{{ selectedTech.description }}</p>
       
    </div>
       

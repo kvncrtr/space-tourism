@@ -11,14 +11,14 @@ import { SpaceService } from '../../space.service';
 export class CrewComponent implements OnInit {
   @ViewChild('radioList') radioList!: ElementRef;
 
-  crew: Crew[] = []
+  crew: Crew[] = [];
   currentMember: any = {};
 
   constructor(private spaceService: SpaceService) { }
 
   ngOnInit(): void {
     this.getCrewData()
-  }
+  };
   
   getCrewData(): void {
     this.spaceService.getSpaceData()
@@ -26,14 +26,14 @@ export class CrewComponent implements OnInit {
         this.crew = spaceData.crew
         this.currentMember = spaceData.crew[0]
       })
-  }
+  };
 
   switchMemeber(name: string): void {
     this.crew.filter(memeber => {
-      console.log(memeber.name, name)
       if (memeber.name === name) {
         this.currentMember = memeber
       }
     })
-  }
+  };
+
 }
