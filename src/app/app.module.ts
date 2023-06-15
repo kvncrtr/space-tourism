@@ -5,7 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FormsModule } from '@angular/forms';
+
+
+/* Providers */ 
 import { InMemoryDataService } from './in-memory-data.service';
+import { SpaceService } from './space.service';
 
 /* Components */ 
 import { AppComponent } from './app.component';
@@ -16,6 +21,15 @@ import { CrewComponent } from './components/crew/crew.component';
 import { TechComponent } from './components/tech/tech.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )  
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -24,15 +38,10 @@ import { TechComponent } from './components/tech/tech.component';
     CrewComponent,
     TechComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+  providers: [
+    InMemoryDataService, 
+    SpaceService
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

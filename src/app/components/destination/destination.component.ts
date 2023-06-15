@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SpaceService } from '../../space.service';
+import { InMemoryDataService } from 'src/app/in-memory-data.service';
+import { Destinations } from 'src/app/space';
 
 @Component({
   selector: '.destination--container',
@@ -8,7 +10,9 @@ import { SpaceService } from '../../space.service';
   styleUrls: ['./destination.component.css'],
 })
 export class DestinationComponent implements OnInit  { 
-  destination: any;
+  destinationData: Destinations[]  = [];
+
+  selectedPlanet: any;
 
   constructor(private spaceService: SpaceService) { }
 
@@ -18,6 +22,18 @@ export class DestinationComponent implements OnInit  {
 
   getDestinationData(): void {
     this.spaceService.getSpaceData()
-      .subscribe(space => this.destination = space.destinations)
+      .subscribe(spaceData => {
+        this.destinationData = spaceData.destinations
+        this.selectedPlanet = spaceData.destinations[0]
+      });
+  };
+
+  handleClick(placeName: string): void {
+   this.destinationData.filter(place => {
+      if (place.name === placeName) {
+        this.selectedPlanet = place
+      }
+    })
   }
+  
 }
