@@ -15,10 +15,7 @@ export class DestinationComponent implements OnInit, AfterViewInit  {
   selectedPlanet: Destinations | any;
   navList: any = {};
 
-  constructor (
-      private spaceService: SpaceService,
-      private elementRef: ElementRef
-    ) { }
+  constructor (private spaceService: SpaceService) { }
 
   ngOnInit(): void {
     this.getDestinationData()
