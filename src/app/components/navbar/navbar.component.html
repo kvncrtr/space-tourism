@@ -28,8 +28,8 @@
 
    </div>
 
-   <ul class="navbar--list">
-      <li class="navbar--link" routerLinkActive="active" routerLink="/home">
+   <ul class="navbar--list" #navList>
+      <li class="navbar--link selected" routerLinkActive="active" routerLink="/home">
          <div (click)="toggleNav()"><span aria-hidden="true">00</span>Home</div>
       </li>
       <li class="navbar--link" routerLinkActive="active" routerLink="/destination">
