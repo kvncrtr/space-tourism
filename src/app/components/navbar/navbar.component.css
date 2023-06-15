@@ -135,3 +135,28 @@
       display: none;
    }
 }
+
+@media screen and (min-width: 1440px) {
+   .navbar--box {
+      z-index: 3;
+   }
+
+   .navbar--line {
+      position: relative;
+      right: 62.5vw;
+      content: '';
+      height: 1px;
+      width: 26rem;
+      background-color: var(--clr-primary-100);
+      display: block;
+      opacity: 0.1;
+   }
+   li > div {
+      display: inline;
+   }
+
+   span {
+      display: inline-block;
+      width: min-content;
+   }
+}

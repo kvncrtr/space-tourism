@@ -27,7 +27,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   
   ngAfterViewInit(): void {
     this.nodeList = this.navList.nativeElement.childNodes
-    this.setCurrentPage()
   }
   
   toggleNav(): void {
@@ -56,19 +55,4 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     }
   }
 
-  setCurrentPage(): void {
-    this.nodeList.forEach((element: any) => {
-      element.classList.forEach((index: any) => {
-        if (index == 'selected') {
-          this.selectedPage = element.outerText
-          this.setSelectedStyle()
-        }
-      })
-    })
-  }
-  
-  setSelectedStyle(): void {
-    console.log(this.selectedPage)
-    
-  }
 }
